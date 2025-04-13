@@ -1,0 +1,111 @@
+{
+    "info": {
+        "_postman_id": "e4a2a2b8-c567-48de-a56d-92d5570e9a84",
+        "name": "Ride API",
+        "description": "Collection for testing Ride API endpoints",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "GET /rides",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/rides",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "3000",
+                    "path": ["rides"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "POST /rides",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"driverName\": \"Jane\",\n    \"pickup\": \"Downtown\",\n    \"destination\": \"Airport\",\n    \"status\": \"available\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/rides",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "3000",
+                    "path": ["rides"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "PATCH /rides/:id",
+            "request": {
+                "method": "PATCH",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"status\": \"completed\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/rides/:id",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "3000",
+                    "path": ["rides", ":id"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "PUT /rides/:id",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"driverName\": \"John\",\n    \"status\": \"cancelled\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/rides/:id",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "3000",
+                    "path": ["rides", ":id"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "DELETE /rides/:id",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:3000/rides/:id",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "3000",
+                    "path": ["rides", ":id"]
+                }
+            },
+            "response": []
+        }
+    ]
+}
